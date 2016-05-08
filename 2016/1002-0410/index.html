@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo博客配置 - 世间已无我</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="上一篇学习搭建Hexo博客并将其部署到Github上，本文将按照自己的喜好和习惯来对博客的主题和细节进行配置。为了方便叙述，我们依旧假设Hexo目录为D:\Hexo。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客配置">
+<meta property="og:url" content="http://yoursite.com/2016/1002-0410/index.html">
+<meta property="og:site_name" content="世间已无我">
+<meta property="og:description" content="上一篇学习搭建Hexo博客并将其部署到Github上，本文将按照自己的喜好和习惯来对博客的主题和细节进行配置。为了方便叙述，我们依旧假设Hexo目录为D:\Hexo。">
+<meta property="og:image" content="http://laosanlaoyao.github.io/blogsource/images/2016/test.jpg">
+<meta property="og:updated_time" content="2016-05-08T15:24:13.680Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo博客配置">
+<meta name="twitter:description" content="上一篇学习搭建Hexo博客并将其部署到Github上，本文将按照自己的喜好和习惯来对博客的主题和细节进行配置。为了方便叙述，我们依旧假设Hexo目录为D:\Hexo。">
+<meta name="twitter:image" content="http://laosanlaoyao.github.io/blogsource/images/2016/test.jpg">
+  
+  
+    <link rel="icon" href="/css/images/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="logo" class="logo logo-text" href="/">Clemenceau</a>
+	  
+	  <div id="mydescription">我爱上的人，称我为怪叔叔。</div>
+	  
+	  <!--
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        </div>
+      </nav>
+	  -->
+    </div>
+	
+	<a id="main-nav-toggle" class="nav-icon" href="javascript:;">菜单</a>
+	  <br>
+	  <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+	
+  </div>
+</header>
+    <section id="main" class="outer"><article id="post-1002" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo博客配置
+    </h1>
+  
+
+      </header>
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>上一篇学习搭建Hexo博客并将其部署到Github上，本文将按照自己的喜好和习惯来对博客的主题和细节进行配置。为了方便叙述，我们依旧假设Hexo目录为<code>D:\Hexo</code>。</p>
+<a id="more"></a>
+<h2 id="1-修改主题"><a href="#1-修改主题" class="headerlink" title="1. 修改主题"></a>1. 修改主题</h2><p>生成博客系统时默认的博客主题是landscape，但萝卜青菜各有所爱，每个人都可以定义自己的主题，hexo主题列表的链接为<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">Hexo Themes</a>，如果想预览主题可以到<a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a>。选中自己喜欢的主题，进入其Github下载页面，根据README.md进行下载安装。例如我的主题是cyanstyle，进入其仓库页面<a href="https://github.com/wizardforcel/hexo-theme-cyanstyle" target="_blank" rel="external">https://github.com/wizardforcel/hexo-theme-cyanstyle</a>，根据安装说明，在目录<code>D:\Hexo</code>执行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/wizardforcel/hexo-theme-cyanstyle.git themes/cyanstyle</span><br></pre></td></tr></table></figure>
+<p>并修改<code>D:\Hexo\_config.yml</code>文件中<code>theme</code>的值，即<code>theme: cyanstyle</code>。博客的主题保存在<code>D:\Hexo\themes</code>目录下。</p>
+<h2 id="2-修改背景"><a href="#2-修改背景" class="headerlink" title="2. 修改背景"></a>2. 修改背景</h2><p>一般来说，主题的默认背景格式都不太合我们口味，因此可对找到主题的样式表进行适当调整，例如我的主题样式表是目录<code>D:\Hexo\themes\cyanstyle\source\css</code>中的<code>style.css</code>文件，找到背景设置部分：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/* Backgroud */</span><br><span class="line">#bg &#123;</span><br><span class="line">  background-image: url(&quot;images/body.jpg&quot;);</span><br><span class="line">  background-color: #F1F1F1;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面列出了背景图片和背景颜色的样式设置，其中图片所在目录为<code>D:\Hexo\themes\cyanstyle\source\css\images</code>。</p>
+<h2 id="3-返回顶部"><a href="#3-返回顶部" class="headerlink" title="3. 返回顶部"></a>3. 返回顶部</h2><p>如果一篇博文太长，就有必要支持返回顶部的功能，我想到的方法有两种，一种是通过锚点实现，一种是通过javascript实现，前者比较简单。</p>
+<ul>
+<li>锚点方法</li>
+</ul>
+<p>在主题目录中的模板文件<code>head.ejs</code>或<code>header.ejs</code>中添加如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a name=&quot;top&quot; id=&quot;top&quot;&gt;&amp;nbsp;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>然后在主题目录中的任何一个全局ejs模本中添加如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--返回顶部开始--&gt;</span><br><span class="line">&lt;div id=&quot;full&quot; style=&quot;width:0px; height:0px; position:fixed; right:8%; bottom:100px; z-index:100; text-align:center; background-color:transparent; cursor:pointer;&quot;&gt;</span><br><span class="line">  &lt;a href=&quot;#top&quot;&gt;&lt;img src=&quot;/css/images/top.png&quot; border=0 alt=&quot;返回顶部&quot;&gt;&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;!--返回顶部结束--&gt;</span><br></pre></td></tr></table></figure>
+<p>返回顶部图标<code>top.png</code>可以根据自己的喜好自己去下载一张，并放到相应目录即可。</p>
+<ul>
+<li>javascript方法</li>
+</ul>
+<p>是在主题的javascript目录（或js目录）下添加<code>top.js</code>文件，文件中的代码为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">function goTop(acceleration, time) &#123;</span><br><span class="line">	acceleration = acceleration || 0.1;</span><br><span class="line">	time = time || 16;</span><br><span class="line"></span><br><span class="line">	var x1 = 0;</span><br><span class="line">	var y1 = 0;</span><br><span class="line">	var x2 = 0;</span><br><span class="line">	var y2 = 0;</span><br><span class="line">	var x3 = 0;</span><br><span class="line">	var y3 = 0;</span><br><span class="line"></span><br><span class="line">	if(document.documentElement) &#123;</span><br><span class="line">		x1 = document.documentElement.scrollLeft || 0;</span><br><span class="line">		y1 = document.documentElement.scrollTop || 0;</span><br><span class="line">	&#125;</span><br><span class="line">	if (document.body) &#123;</span><br><span class="line">		x2 = document.body.scrollLeft || 0;</span><br><span class="line">		y2 = document.body.scrollTop || 0;</span><br><span class="line">	&#125;</span><br><span class="line">	var x3 = window.scrollX || 0;</span><br><span class="line">	var y3 = window.scrollY || 0;</span><br><span class="line"></span><br><span class="line">	var x = Math.max(x1, Math.max(x2, x3));</span><br><span class="line">	var y = Math.max(y1, Math.max(y2, y3));</span><br><span class="line"></span><br><span class="line">	var speed = 1 + acceleration;</span><br><span class="line">	window.scrollTo(Math.floor(x / speed), Math.floor(y / speed));</span><br><span class="line"></span><br><span class="line">	if(x &gt; 0 || y &gt; 0) &#123;</span><br><span class="line">		var invokeFunction = &quot;goTop(&quot; + acceleration + &quot;, &quot; + time + &quot;)&quot;;</span><br><span class="line">		window.setTimeout(invokeFunction, time);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后在任何一个全局的ejs模本中添加如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;/js/top.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;!--返回顶部开始--&gt;</span><br><span class="line">&lt;div id=&quot;full&quot; style=&quot;width:0px; height:0px; position:fixed; right:8%; bottom:100px; z-index:100; text-align:center; background-color:transparent; cursor:pointer;&quot;&gt;</span><br><span class="line">  &lt;a href=&quot;#&quot; onclick=&quot;goTop();return false;&quot;&gt;&lt;img src=&quot;/css/images/top.png&quot; border=0 alt=&quot;返回顶部&quot;&gt;&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;!--返回顶部结束--&gt;</span><br></pre></td></tr></table></figure>
+<p>我习惯把这种额外添加的全局代码放在<code>footer.ejs</code>文件中，需要注意的是，第1行的js路径要根据实际情况设置正确，然后不要忘了图标<code>top.png</code>。</p>
+<h2 id="4-主页文章数目"><a href="#4-主页文章数目" class="headerlink" title="4. 主页文章数目"></a>4. 主页文章数目</h2><p>设置主页中每个页面要显示的文章数目，这个很简单，修改<code>D:\Hexo\_config.yml</code>文件中的<code>Pagination</code>部分，例如我的配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Pagination</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">per_page: 7</span><br><span class="line">pagination_dir: page</span><br></pre></td></tr></table></figure>
+<h2 id="5-首页文章摘要"><a href="#5-首页文章摘要" class="headerlink" title="5. 首页文章摘要"></a>5. 首页文章摘要</h2><p>每一篇博文（即.md文件）中，在需要显示摘要的地方添加如下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+<p>上述代码之前的内容为文章摘要，会在主页显示，上述代码之后的内容需要点击链接<a href="#jump">阅读更多</a><span id="jump">才会转到文章页面显示</span>。</p>
+<h2 id="6-永久链接"><a href="#6-永久链接" class="headerlink" title="6. 永久链接"></a>6. 永久链接</h2><p>首先要先介绍一下文章的前置申明，顾名思义，就是写在文章前面的一块内容，为了对文章进行某些设置。它有两种书写方式：</p>
+<ul>
+<li>YAML方式，以三短线结束</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2016/4/10 20:46:25</span><br><span class="line">tags: 教程</span><br><span class="line">id: 1001</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<ul>
+<li>JSON方式，以三分号结束</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">;;;</span><br><span class="line">&quot;title&quot;: &quot;Hello World&quot;,</span><br><span class="line">&quot;date&quot;: &quot;2016/4/10 20:46:25&quot;</span><br><span class="line">;;;</span><br></pre></td></tr></table></figure>
+<p>其中<code>title</code>、<code>date</code>、<code>tags</code>、<code>categories</code>等都是默认支持的变量，<code>id</code>是我自己添加的。</p>
+<p>我们可以通过<code>D:\Hexo\_config.yml</code>文件或者文章的前置申明来设置文章的永久链接，这里只介绍第一种方法。在<code>D:\Hexo\_config.yml</code>文件中找到URL部分如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">url: http://yoursite.com/</span><br><span class="line">root: /</span><br><span class="line">permalink: :year/:id-:month:day/</span><br><span class="line">permalink_defaults:</span><br></pre></td></tr></table></figure>
+<p>这里<code>permalink</code>的值就是文章永久链接的全局格式，默认一般都是<code>:year/:month/:day/title/</code>，也就是说用日期变量和标题变量来定义，由于文章标题可能是中文，所以我增加了一个<code>id</code>变量并用其定义永久链接，当然实际的链接需要加上博客域名作为前缀，例如本文的永久链接为<a href="http://laosanlaoyao.github.io/2016/1002-0410" target="_blank" rel="external">http://laosanlaoyao.github.io/2016/1002-0410</a>。</p>
+<h2 id="7-评论功能"><a href="#7-评论功能" class="headerlink" title="7. 评论功能"></a>7. 评论功能</h2><p>假设你注册多说后在基本设置里获得的多说二级域名为<code>test.duoshuo.com</code>，则在文件<code>D:\Hexo\_config.yml</code>或文件<code>D:\Hexo\themes\_config.yml</code>中设置<code>duoshuo_shortname: test</code>，然后在目录<code>D:\Hexo\themes\cyanstyle\layout\_partial</code>下新建模板文件<code>comment.ejs</code>，文件中的代码为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (!index &amp;&amp; post.comments &amp;&amp; theme.duoshuo_shortname)&#123; %&gt;</span><br><span class="line">&lt;section id=&quot;comments&quot;&gt;</span><br><span class="line">  &lt;!-- 多说评论框 start --&gt;</span><br><span class="line">  &lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&lt;%= post.year %&gt;&lt;%= post.id %&gt;&quot; data-title=&quot;&lt;%= post.title %&gt;&quot; data-url=&quot;&lt;%= page.permalink %&gt;&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;!-- 多说评论框 end --&gt;</span><br><span class="line">  &lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt;</span><br><span class="line">  &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">  var duoshuoQuery = &#123;short_name:&apos;&lt;%= theme.duoshuo_shortname %&gt;&apos;&#125;;</span><br><span class="line">    (function() &#123;</span><br><span class="line">	  var ds = document.createElement(&apos;script&apos;);</span><br><span class="line">	  ds.type = &apos;text/javascript&apos;;ds.async = true;</span><br><span class="line">	  ds.src = (document.location.protocol == &apos;https:&apos; ? &apos;https:&apos; : &apos;http:&apos;) + &apos;//static.duoshuo.com/embed.js&apos;;</span><br><span class="line">	  ds.charset = &apos;UTF-8&apos;;</span><br><span class="line">	  (document.getElementsByTagName(&apos;head&apos;)[0]</span><br><span class="line">	   || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(ds);</span><br><span class="line">    &#125;)();</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">  &lt;!-- 多说公共JS代码 end --&gt;</span><br><span class="line">&lt;/section&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<p>其中<code>data-thread-key</code>可以根据自己文章的实际情况设置，但是必须能够唯一标识该文章。上述操作完成之后，只需要在模板文件<code>D:\Hexo\themes\cyanstyle\layout\_partial\article.ejs</code>尾部增加以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial(&apos;comment&apos;) %&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>重要说明</strong>：模板文件<code>comment.ejs</code>中的<code>data-thread-key</code>相当于是识别码，必须能够唯一标识文章，因为每篇文章的评论只能通过<code>data-thread-key</code>识别获取，一旦文章的<code>data-thread-key</code>改变，意味着只要你更新Hexo，文章的评论就全部没有了，切记！。根据我自己的定义，也就是说，每篇文章只要发布并有人评论，其<code>post.year</code>和<code>post.id</code>都不能改变，除非评论不想要了。</p>
+<p>根据模板文件<code>comment.ejs</code>中的代码逻辑<code>post.comments &amp;&amp; theme.duoshuo_shortname</code>，可知，如果要关闭所有文章的评论，可以在文件<code>D:\Hexo\_config.yml</code>或文件<code>D:\Hexo\themes\_config.yml</code>中设置<code>duoshuo_shortname: false</code>，如果要关闭某篇文章的评论，只需在文章的前置申明中加上变量<code>comments</code>的定义。</p>
+<p>据说多说评论会抓取网站的所有文章和用户信息，所以我没有使用评论功能，打算以后有时间自己学习搞个原生评论框。</p>
+<h2 id="8-文章照片"><a href="#8-文章照片" class="headerlink" title="8. 文章照片"></a>8. 文章照片</h2><p>例如本文是<code>D:\Hexo\source\_posts</code>目录中的一篇名为<code>1002.md</code>的文章，在该目录下手动创建文件夹1002，将文章中要引用的照片<code>test.png</code>放入该文件夹，此时在<code>D:\Hexo\source\_posts</code>目录下的结构为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1002.md</span><br><span class="line">1002</span><br><span class="line">└── test.png</span><br></pre></td></tr></table></figure>
+<p>由于本文的<code>permalink</code>为<code>2016/1002-0410/</code>，因此使用命令<code>hexo g</code>生成网页之后的结构为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">D:\Hexo\public\2016\1002-0410</span><br><span class="line">├── index.html</span><br><span class="line">└── test.png</span><br></pre></td></tr></table></figure>
+<h4 id="图床法"><a href="#图床法" class="headerlink" title="图床法"></a>图床法</h4><p>在<code>hexo 2.x</code>之前，使用照片的相对路径会出现问题，因为文章里通过MarkDown语法引用照片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![test](1002/test.png)</span><br></pre></td></tr></table></figure>
+<p>而生成<code>index.html</code>时，该代码会变成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;1002/test.png&quot; alt=&quot;test&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>似乎一切正常，<strong>但是，此时博客系统中<code>test.png</code>的相对路径已经变成了<code>2016/1002-0410/test.png</code>，也就是说网页<code>index.html</code>中的照片路径是错误的。</strong></p>
+<p>如果是网络照片，链接部分直接填写照片的http链接，就不会出现这种问题，因此，很多人使用一种叫图床的方法来嵌入照片。大体思路是在主题目录下的js文件夹中创建一个<code>img.js</code>文件，内容为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo.extend.tag.register(&apos;images&apos;, function(args, content)&#123;</span><br><span class="line">  var id = args[0];</span><br><span class="line">  return &apos;http://xxx.yyyy.com&apos;;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>然后，以后写文章插入图片时不再使用MarkDown的语法，而是使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;&#123;% images %&#125;/test.png&quot; alt=&quot;&quot;&gt;test&lt;/img&gt;</span><br></pre></td></tr></table></figure>
+<p>生成<code>index.html</code>时，该照片代码会变成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;http://xxx.yyyy.com/test.png&quot; alt=&quot;&quot;&gt;test&lt;/img&gt;</span><br></pre></td></tr></table></figure>
+<p>当然前提是你要把照片<code>test.png</code>上传到网络存储<code>http://xxx.yyyy.com</code>上，虽然麻烦些，倒也不失为一个好方法。不过我没用过，大家可以自己找找有什么比较好用的图床。</p>
+<h4 id="插件法"><a href="#插件法" class="headerlink" title="插件法"></a>插件法</h4><p>貌似<code>hexo 2.x</code>之后，上述图床的方法就不好用了，新的插件<code>hexo-asset-image</code>很好地解决本地图片的相对路径问题，其安装方法是在<code>D:\Hexo</code>目录下执行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+<p>在文件<code>D:\Hexo\_config.yml</code>中，找到<code>Wrting</code>部分，设置<code>post_asset_folder: true</code>，则每次用命令行创建新文章时都会创建同名文件夹。仍以本文为例，文件夹1002是生成文章时自动创建的，我们只需把照片<code>test.png</code>放在该文件夹中，然后使用MarkDown语法<code>![test](test/test.png)</code>将照片嵌入文章，则生成<code>index.html</code>时，照片的路径就会是正确的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;2016/1002-0410/test.png&quot; alt=&quot;&quot;&gt;test&lt;/img&gt;</span><br></pre></td></tr></table></figure>
+<p>这种方法很方便，唯一的缺点就是每次更新博客都需要把所有文章的所有照片重新同步到Github。我用的方法比较土，就是在Github上新建一个仓库专门存放图片，需要的时候直接引用图片的网络路径，例如：</p>
+<p><img src="http://laosanlaoyao.github.io/blogsource/images/2016/test.jpg" alt="test"></p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>暂时就探索这么些东西，已经能够把博客弄得简洁而不至于简陋，最重要的是能够符合我们自己的使用习惯。</p>
+
+      
+    </div>
+    
+	
+	<div class="article-meta">
+      <a href="/2016/1002-0410/" class="article-date">
+  <time datetime="2016-04-10T14:37:08.000Z" itemprop="datePublished">2016-04-10</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </div>
+
+	  
+<div class="article-tag">
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+</div>
+
+      
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/1001-0410/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo+Github搭建博客&nbsp;<span>&gt;</span></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 LIWZ&nbsp;&nbsp;|&nbsp;&nbsp;
+      POWERED BY <a href="http://hexo.io/" target="_blank">HEXO</a> AND <a href="https://github.com/">GITHUB</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>

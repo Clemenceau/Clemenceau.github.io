@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo+Github搭建博客 - 世间已无我</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hexo是由Node.js驱动的一款快速简单且功能强大的博客框架，支持MarkDown语法编写文章，可生成静态网页托管在GitHub或其他网站。本文将讲述搭建Hexo博客的整个流程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+Github搭建博客">
+<meta property="og:url" content="http://yoursite.com/2016/1001-0410/index.html">
+<meta property="og:site_name" content="世间已无我">
+<meta property="og:description" content="Hexo是由Node.js驱动的一款快速简单且功能强大的博客框架，支持MarkDown语法编写文章，可生成静态网页托管在GitHub或其他网站。本文将讲述搭建Hexo博客的整个流程。">
+<meta property="og:updated_time" content="2016-05-08T15:24:13.675Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo+Github搭建博客">
+<meta name="twitter:description" content="Hexo是由Node.js驱动的一款快速简单且功能强大的博客框架，支持MarkDown语法编写文章，可生成静态网页托管在GitHub或其他网站。本文将讲述搭建Hexo博客的整个流程。">
+  
+  
+    <link rel="icon" href="/css/images/favicon.png">
+  
+  <link href="/webfonts/ptserif/main.css" rel='stylesheet' type='text/css'>
+  <link href="/webfonts/source-code-pro/main.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="logo" class="logo logo-text" href="/">Clemenceau</a>
+	  
+	  <div id="mydescription">我爱上的人，称我为怪叔叔。</div>
+	  
+	  <!--
+      <nav id="sub-nav">
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        </div>
+      </nav>
+	  -->
+    </div>
+	
+	<a id="main-nav-toggle" class="nav-icon" href="javascript:;">菜单</a>
+	  <br>
+	  <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+	
+  </div>
+</header>
+    <section id="main" class="outer"><article id="post-1001" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo+Github搭建博客
+    </h1>
+  
+
+      </header>
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hexo是由Node.js驱动的一款快速简单且功能强大的博客框架，支持MarkDown语法编写文章，可生成静态网页托管在GitHub或其他网站。本文将讲述搭建Hexo博客的整个流程。</p>
+<a id="more"></a>
+<h2 id="一-安装Node-js"><a href="#一-安装Node-js" class="headerlink" title="一. 安装Node.js"></a>一. 安装Node.js</h2><p>在Windows环境下安装Node.js非常简单，仅须到<a href="https://nodejs.org/" target="_blank" rel="external">nodejs.org</a>下载安装文件，双击运行，一路Next即可，一般不需要自己配置环境变量。</p>
+<h2 id="二-安装Git"><a href="#二-安装Git" class="headerlink" title="二. 安装Git"></a>二. 安装Git</h2><p>在Windows环境下安装Git也也同样是一路Next，安装文件可到<a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git for windows</a>下载。</p>
+<h6 id="Git基本操作"><a href="#Git基本操作" class="headerlink" title="Git基本操作"></a>Git基本操作</h6><ul>
+<li><code>git init</code> 新建一个仓库</li>
+<li><code>git clone</code> 将远程仓库复制到本地</li>
+<li><code>git pull</code> 抓取远程仓库所有分支的更新并合并到本地</li>
+<li><code>git add .</code> 跟踪修改过的所有文件</li>
+<li><code>git commit</code> 提交修改</li>
+<li><code>git push</code> 推送更新到远程仓库</li>
+</ul>
+<h2 id="三-安装Hexo"><a href="#三-安装Hexo" class="headerlink" title="三. 安装Hexo"></a>三. 安装Hexo</h2><h4 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1. 安装Hexo"></a>1. 安装Hexo</h4><p>右键桌面任意位置，打开Git Bash，执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p>如果出现错误，可能是因为被墙，执行以下命令将镜像源换成国内的，然后再重复安装操作。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry=<span class="string">"http://registry.cnpmjs.org"</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-创建Hexo目录"><a href="#2-创建Hexo目录" class="headerlink" title="2. 创建Hexo目录"></a>2. 创建Hexo目录</h4><p>根据自己的喜好创建目录，例如<code>D:\Hexo</code>，在目录下生成搭建网站所需要的文件，方法是在该目录下右键打开Git Bash，执行命令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<h6 id="Hexo目录下文件信息"><a href="#Hexo目录下文件信息" class="headerlink" title="Hexo目录下文件信息"></a>Hexo目录下文件信息</h6><ul>
+<li><code>_config.yml</code> 全局配置文件</li>
+<li><code>package.json</code> 应用数据文件，包含版本和组件信息</li>
+<li><code>scaffolds</code> 模版文件夹</li>
+<li><code>source</code> 文章和资源文件夹，最好定期备份</li>
+<li><code>themes</code> 主题文件夹</li>
+</ul>
+<h4 id="3-安装Hexo插件"><a href="#3-安装Hexo插件" class="headerlink" title="3. 安装Hexo插件"></a>3. 安装Hexo插件</h4><p>在Hexo目录下继续执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<p>上述操作只会安装几个基本插件，个人建议将下面的插件都安装完：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-archive --save</span><br><span class="line">npm install hexo-generator-category --save</span><br><span class="line">npm install hexo-generator-tag --save</span><br><span class="line">npm install hexo-server --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-deployer-heroku --save</span><br><span class="line">npm install hexo-deployer-rsync --save</span><br><span class="line">npm install hexo-deployer-openshift --save</span><br><span class="line">npm install hexo-renderer-marked@0.2 --save</span><br><span class="line">npm install hexo-renderer-stylus@0.2 --save</span><br><span class="line">npm install hexo-generator-feed@1 --save</span><br><span class="line">npm install hexo-generator-sitemap@1 --save</span><br></pre></td></tr></table></figure>
+<h2 id="四-搭建本地博客"><a href="#四-搭建本地博客" class="headerlink" title="四. 搭建本地博客"></a>四. 搭建本地博客</h2><h6 id="Hexo基本操作"><a href="#Hexo基本操作" class="headerlink" title="Hexo基本操作"></a>Hexo基本操作</h6><ul>
+<li><code>hexo g</code> = <code>hexo generate</code> 生成静态博客，对博客系统修改后需通过该命令来重新生成</li>
+<li><code>hexo n</code> = <code>hexo new</code> 创建一篇新的博客</li>
+<li><code>hexo s</code> = <code>hexo server</code> 在本地开启博客系统</li>
+<li><code>hexo d</code> = <code>hexo delopy</code> 上传本地博客到服务器</li>
+</ul>
+<p>在Hexo目录下执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>至此，本地博客系统已经搭建完成，可在浏览器访问<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>查看效果。</p>
+<h2 id="五-创建远程仓库"><a href="#五-创建远程仓库" class="headerlink" title="五. 创建远程仓库"></a>五. 创建远程仓库</h2><h4 id="1-注册Github账户"><a href="#1-注册Github账户" class="headerlink" title="1. 注册Github账户"></a>1. 注册Github账户</h4><p>如果没有Github账户，可以访问<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a>，注册一个新账户。</p>
+<h4 id="2-创建仓库"><a href="#2-创建仓库" class="headerlink" title="2. 创建仓库"></a>2. 创建仓库</h4><p>登陆Github，创建一个<code>Repository</code>，其中<code>Repository Name</code>和用户名相同。比如我的用户名为<code>laosanlaoyao</code>，那么<code>laosanlaoyao.github.io</code>就是我的仓库名称。</p>
+<h2 id="六-配置SSH"><a href="#六-配置SSH" class="headerlink" title="六. 配置SSH"></a>六. 配置SSH</h2><h4 id="1-配置用户"><a href="#1-配置用户" class="headerlink" title="1. 配置用户"></a>1. 配置用户</h4><p>Git会根据用户的姓名和邮箱来对每次提交进行记录，GitHub也是用这些信息来做权限处理。执行以下命令进行用户设置，把姓名和邮箱替换成你自己的，这里的姓名是随意的，邮箱是你的联系邮箱。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"your name"</span></span><br><span class="line">git config --global user.email <span class="string">"your email address"</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-配置SSH"><a href="#2-配置SSH" class="headerlink" title="2. 配置SSH"></a>2. 配置SSH</h4><p>在本地修改内容之后，可以直接通过git操作将其同步到远程的Github，这归功于Github的SSH密钥。执行以下命令生成SSH密钥：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your email address"</span></span><br></pre></td></tr></table></figure>
+<p>首先会提示设置密钥文件的存储路径，直接回车默认即可。接着，会提示输入密码并确认。完成之后，会在<code>~/.ssh/</code>目录下生成<code>id_rsa</code>和<code>id_rsa.pub</code>文件，运行如下命令，将公钥复制到系统粘贴板<code>clipboard</code>中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clip &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>接着，登陆GitHub，进入<code>Account Settings</code> &gt; <code>SSH and GPG Keys</code>，点击<code>New SSH key</code>，粘贴刚才复制的密钥，添加即可。</p>
+<h4 id="3-测试"><a href="#3-测试" class="headerlink" title="3. 测试"></a>3. 测试</h4><p>执行如下命令看看是否成功，如果之前配置SSH密钥时设置了密码，会提示输入密码。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>至此，本机已成功连接到Github。</p>
+<h2 id="七-将本地博客部署到Github"><a href="#七-将本地博客部署到Github" class="headerlink" title="七. 将本地博客部署到Github"></a>七. 将本地博客部署到Github</h2><h4 id="1-配置-config-yml"><a href="#1-配置-config-yml" class="headerlink" title="1. 配置_config.yml"></a>1. 配置_config.yml</h4><p>编辑Hexo目录下的<code>_config.yml</code>文件，修改<code>Deployment</code>部分如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@github.com:laosanlaoyao/laosanlaoyao.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>注意，冒号之后必须有一个空格，将<code>repository</code>的内容替换成你的仓库地址，可以登陆Github进入刚才创建的仓库中进行拷贝，我用的是<code>SSH URL</code>，仓库地址的一般格式为：</p>
+<ul>
+<li><code>HTTPS URL</code>: git@github.com:Github账号/Github账号.github.io.git</li>
+<li><code>SSH URL</code>: https:<a href=""></a>//github.com/Github账号/Github账号.github.com.git</li>
+</ul>
+<h4 id="2-部署"><a href="#2-部署" class="headerlink" title="2. 部署"></a>2. 部署</h4><p>在Hexo目录下执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>根据提示，需要输入刚才配置SSH时设置的密码，等待一会即可部署完成。</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>至此，博客搭建成功，可通过浏览器访问，比如我的博客地址是<a href="http://laosanlaoyao.github.io/" target="_blank" rel="external">laosanlaoyao.github.io</a>。需要特别说明的是，本地博客系统的任何改动都需要重新执行<code>hexo g</code>和<code>hexo d</code>命令才能同步到Github，而且每次同步都会对远程博客系统完全覆盖。</p>
+
+      
+    </div>
+    
+	
+	<div class="article-meta">
+      <a href="/2016/1001-0410/" class="article-date">
+  <time datetime="2016-04-10T14:16:43.000Z" itemprop="datePublished">2016-04-10</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </div>
+
+	  
+<div class="article-tag">
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+</div>
+
+      
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/1002-0410/" id="article-nav-newer" class="article-nav-link-wrap">
+      <div class="article-nav-title"><span>&lt;</span>&nbsp;
+        
+          Hexo博客配置
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 LIWZ&nbsp;&nbsp;|&nbsp;&nbsp;
+      POWERED BY <a href="http://hexo.io/" target="_blank">HEXO</a> AND <a href="https://github.com/">GITHUB</a>
+    </div>
+  </div>
+</footer>
+    
+
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+  </div>
+</body>
+</html>
